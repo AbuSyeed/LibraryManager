@@ -9,5 +9,6 @@ namespace LibraryManager.Data
     public interface IBookData
     {
         IEnumerable<Book> GetAllBooks();
+        IEnumerable<Book> GetBooksByTitle(string searchTerm);
     }
 }

@@ -24,5 +24,12 @@ namespace LibraryManager.Data
             return books.OrderBy(b => b.Title).ToList();
 
         }
+
+        public IEnumerable<Book> GetBooksByTitle(string searchTerm)
+        {
+            return books
+                  .Where(r => string.IsNullOrEmpty(searchTerm) || r.Title.StartsWith(searchTerm))
+                  .OrderBy(m => m.Title).ToList();
+        }
     }
 }

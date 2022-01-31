@@ -13,6 +13,9 @@ namespace LibraryManager.Pages.Books
     {
         private readonly IBookData books;
         public IEnumerable<Book> Books { get; set; }
+        
+        [BindProperty(SupportsGet = true)] // by default binding is only done for POST
+        public string SearchTerm { get; set; }
 
         public ListModel(IBookData books)
         {
@@ -20,7 +23,8 @@ namespace LibraryManager.Pages.Books
         }
         public void OnGet()
         {
-            Books = books.GetAllBooks();
+            SearchTerm ??= "";  //https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-coalescing-operator
+            Books = books.GetBooksByTitle(SearchTerm);
         }
     }
 }
