@@ -5,3 +5,21 @@
 }
 
 <h2>Books</h2>
+
+<table class="table">
+    @foreach (var book in Model.Books)
+    {
+        <tr>
+            <td>
+                <div>
+                    @book.Title
+                </div>
+                <div>
+                    @book.BookGenre
+                </div>
+            </td>
+            <td></td>
+        </tr>
+
+    }
+</table>
