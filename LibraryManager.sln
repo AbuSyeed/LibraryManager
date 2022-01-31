@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManager", "LibraryMa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManager.Core", "LibraryManager.Core\LibraryManager.Core.csproj", "{E2A79565-BB4D-46C6-AEDB-E7E8BA714782}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManager.Data", "LibraryManager.Data\LibraryManager.Data.csproj", "{51B2E070-1A5E-4DE1-B6BC-3D92F5EE5A93}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E2A79565-BB4D-46C6-AEDB-E7E8BA714782}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2A79565-BB4D-46C6-AEDB-E7E8BA714782}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2A79565-BB4D-46C6-AEDB-E7E8BA714782}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51B2E070-1A5E-4DE1-B6BC-3D92F5EE5A93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51B2E070-1A5E-4DE1-B6BC-3D92F5EE5A93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51B2E070-1A5E-4DE1-B6BC-3D92F5EE5A93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51B2E070-1A5E-4DE1-B6BC-3D92F5EE5A93}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
