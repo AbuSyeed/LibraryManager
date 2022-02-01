@@ -3,6 +3,13 @@
 @{
 }
 
+@if (Model.Confirmation != null)
+{
+    <div class="alert alert-info">
+        @Model.Confirmation
+    </div>
+}
+
 <h2>@Model.Book.Title</h2>
 
 <div>@Model.Book.BookGenre</div>

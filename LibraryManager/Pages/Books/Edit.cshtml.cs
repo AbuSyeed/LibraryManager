@@ -49,6 +49,8 @@ namespace LibraryManager.Pages.Books
             {
                 bookData.UpdateBook(Book);
                 bookData.Commit();
+                TempData["Confirmation"] = "Book updated.";
+                return RedirectToPage("./Detail", new { bookId = Book.Id});
             }
 
             return Page();

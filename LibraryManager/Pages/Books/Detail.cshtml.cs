@@ -13,6 +13,8 @@ namespace LibraryManager.Pages.Books
     {
         private readonly IBookData bookData;
         public Book Book { get; set; }
+        [TempData]
+        public string Confirmation { get; set; }
 
         public DetailModel(IBookData bookData)
         {
