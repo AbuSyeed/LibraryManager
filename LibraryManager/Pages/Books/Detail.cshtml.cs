@@ -13,6 +13,8 @@ namespace LibraryManager.Pages.Books
     {
         private readonly IBookData bookData;
         public Book Book { get; set; }
+        //Items added TempData is only available upto the next request to the app
+        //then it's auto cleared
         [TempData]
         public string Confirmation { get; set; }
 

@@ -12,6 +12,9 @@ namespace LibraryManager.Data
         IEnumerable<Book> GetBooksByTitle(string searchTerm);
         Book GetBookById(int bookId);
         Book UpdateBook(Book updatedBook);
+
+        Book AddBook(Book newBook);
+        int GetBookCount();
         int Commit();
     }
 }

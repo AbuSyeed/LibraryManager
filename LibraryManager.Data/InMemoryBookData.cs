@@ -55,5 +55,18 @@ namespace LibraryManager.Data
         {
             return 0;
         }
+
+        public int GetBookCount()
+        {
+            return books.Count();
+        }
+
+        public Book AddBook(Book newBook)
+        {
+            var newBookId = books.Max(b => b.Id) + 1;
+            newBook.Id = newBookId;
+            books.Add(newBook);
+            return newBook;
+        }
     }
 }

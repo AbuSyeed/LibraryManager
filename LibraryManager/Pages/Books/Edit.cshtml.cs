@@ -26,34 +26,45 @@ namespace LibraryManager.Pages.Books
             this.htmlHelper = htmlHelper;
         }
         
-        public IActionResult OnGet(int bookId)
+        public IActionResult OnGet(int? bookId)
         {
             BookGenres = htmlHelper.GetEnumSelectList<BookGenre>();
-
-            Book = bookData.GetBookById(bookId);
-
+            if (bookId.HasValue)
+            {
+                Book = bookData.GetBookById(bookId.Value);
+            }
+            else
+            {
+                Book = new Book();
+            }
             if (Book == null)
             {
                 TempData["ItemType"] = "book";
                 return RedirectToPage("/Shared/NotFound");
             }
-
             return Page();
         }
 
         public IActionResult OnPost()
         {
-            BookGenres = htmlHelper.GetEnumSelectList<BookGenre>();
-
-            if(ModelState.IsValid)
+            if (!ModelState.IsValid)
+            {
+                BookGenres = htmlHelper.GetEnumSelectList<BookGenre>();
+                return Page();
+            }
+            if (Book.Id > 0)
             {
                 bookData.UpdateBook(Book);
-                bookData.Commit();
                 TempData["Confirmation"] = "Book updated.";
-                return RedirectToPage("./Detail", new { bookId = Book.Id});
+            }
+            else
+            {
+                bookData.AddBook(Book);
+                TempData["Confirmation"] = "Book added.";
             }
 
-            return Page();
+            bookData.Commit();
+            return RedirectToPage("./Detail", new { bookId = Book.Id });
         }
     }
 }
