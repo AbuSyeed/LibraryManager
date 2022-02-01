@@ -37,5 +37,23 @@ namespace LibraryManager.Data
         {
             return books.SingleOrDefault(b => b.Id == bookId);
         }
+
+        public Book UpdateBook(Book updatedBook)
+        {
+            var book = books.SingleOrDefault(b => b.Id == updatedBook.Id);
+
+            if(book != null)
+            {
+                book.Title = updatedBook.Title;
+                book.BookGenre = updatedBook.BookGenre;
+            }
+
+            return book;
+        }
+
+        public int Commit()
+        {
+            return 0;
+        }
     }
 }
