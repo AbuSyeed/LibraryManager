@@ -11,6 +11,7 @@
         <label asp-for="Book.Title"></label>
         <input asp-for="Book.Title" class="form-control" />
     </div>
+    <span class="text-danger" asp-validation-for="Book.Title"></span>
     <div class="form-group">
         <label asp-for="Book.BookGenre"></label>
         <select asp-for="Book.BookGenre" class="form-control" asp-items="Model.BookGenres"></select>

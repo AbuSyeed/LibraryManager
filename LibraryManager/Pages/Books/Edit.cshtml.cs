@@ -45,9 +45,11 @@ namespace LibraryManager.Pages.Books
         {
             BookGenres = htmlHelper.GetEnumSelectList<BookGenre>();
 
-            bookData.UpdateBook(Book);
-
-            bookData.Commit();
+            if(ModelState.IsValid)
+            {
+                bookData.UpdateBook(Book);
+                bookData.Commit();
+            }
 
             return Page();
         }
