@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManager", "LibraryManager\LibraryManager.csproj", "{5C6B871C-0B50-49FA-98A1-97A6381C1366}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManager", "LibraryManager\LibraryManager.csproj", "{5C6B871C-0B50-49FA-98A1-97A6381C1366}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManager.Core", "LibraryManager.Core\LibraryManager.Core.csproj", "{E2A79565-BB4D-46C6-AEDB-E7E8BA714782}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManager.Core", "LibraryManager.Core\LibraryManager.Core.csproj", "{E2A79565-BB4D-46C6-AEDB-E7E8BA714782}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManager.Data", "LibraryManager.Data\LibraryManager.Data.csproj", "{51B2E070-1A5E-4DE1-B6BC-3D92F5EE5A93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryManager.Data", "LibraryManager.Data\LibraryManager.Data.csproj", "{51B2E070-1A5E-4DE1-B6BC-3D92F5EE5A93}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

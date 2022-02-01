@@ -10,5 +10,6 @@ namespace LibraryManager.Data
     {
         IEnumerable<Book> GetAllBooks();
         IEnumerable<Book> GetBooksByTitle(string searchTerm);
+        Book GetBookById(int bookId);
     }
 }
