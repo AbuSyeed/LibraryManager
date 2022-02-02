@@ -24,7 +24,9 @@ namespace LibraryManager
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IBookData, InMemoryBookData>();
+            //services.AddDbContextPool<LibraryManagerDbContext>()
+            services.AddScoped<IBookData, DbBookData>();
+            //services.AddSingleton<IBookData, InMemoryBookData>();
             services.AddRazorPages();
         }
 

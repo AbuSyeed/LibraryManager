@@ -19,12 +19,6 @@ namespace LibraryManager.Data
                 new Book { Id =4, Title = "Soft Skills: The Software Developer's Life Manual", BookGenre = BookGenre.Other}
             };
         }
-        
-        public IEnumerable<Book> GetAllBooks()
-        {
-            return books.OrderBy(b => b.Title).ToList();
-
-        }
 
         public IEnumerable<Book> GetBooksByTitle(string searchTerm)
         {
@@ -42,7 +36,7 @@ namespace LibraryManager.Data
         {
             var book = books.SingleOrDefault(b => b.Id == updatedBook.Id);
 
-            if(book != null)
+            if (book != null)
             {
                 book.Title = updatedBook.Title;
                 book.BookGenre = updatedBook.BookGenre;
