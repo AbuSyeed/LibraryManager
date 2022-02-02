@@ -10,7 +10,7 @@ namespace LibraryManager.Pages.Shared
     public class NotFoundModel : PageModel
     {
         [TempData]
-        public string ItemType { get; set; } = "item";
+        public string ItemType { get; set; } = "Item";
         public void OnGet()
         {
         }

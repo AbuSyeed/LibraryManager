@@ -39,7 +39,7 @@ namespace LibraryManager.Pages.Books
             }
             if (Book == null)
             {
-                TempData["ItemType"] = "book";
+                TempData["ItemType"] = "Book";
                 return RedirectToPage("/Shared/NotFound");
             }
             return Page();

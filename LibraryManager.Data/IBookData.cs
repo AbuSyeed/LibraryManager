@@ -13,6 +13,7 @@ namespace LibraryManager.Data
         Book UpdateBook(Book updatedBook);
 
         Book AddBook(Book newBook);
+        Book DeleteBook(int bookId);
         int GetBookCount();
         int Commit();
     }

@@ -24,6 +24,16 @@ namespace LibraryManager.Data
             return db.SaveChanges(); //returns the number of rows that are affected
         }
 
+        public Book DeleteBook(int id)
+        {
+            var book = GetBookById(id);
+            if (book != null)
+            {
+                db.Books.Remove(book);
+            }
+            return book;
+        }
+
         public Book GetBookById(int id)
         {
             return db.Books.Find(id);

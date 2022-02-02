@@ -62,5 +62,17 @@ namespace LibraryManager.Data
             books.Add(newBook);
             return newBook;
         }
+
+        public Book DeleteBook(int bookId)
+        {
+            var bookToDelete = books.SingleOrDefault(b => b.Id == bookId);
+
+            if (bookToDelete != null)
+            {
+                books.Remove(bookToDelete);
+            }
+
+            return bookToDelete;
+        }
     }
 }
