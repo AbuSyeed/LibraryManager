@@ -11,7 +11,7 @@ namespace LibraryManager.Data
         public DbSet<Book> Books { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source=C:\Dev\LearningAndReference\shared projects\LibraryManagerDB\LibraryManagerDB.db;");
+            optionsBuilder.UseSqlite(@"Data Source=C:\LibraryManagerDB\LibraryManagerDB.db;");
         }
     }
 }
